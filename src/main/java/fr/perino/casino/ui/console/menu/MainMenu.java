@@ -4,12 +4,16 @@ import fr.perino.casino.util.Translator.Translator;
 
 import java.util.Scanner;
 
+
 public class MainMenu {
+    final Scanner scanner;
+    final Translator translator;
+    public MainMenu(Translator translator){
+        this.translator = translator;
+        this.scanner = new Scanner(System.in);
 
-    private Translator translator = new Translator("fr");
-
+    }
     public void display() {
-        Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println(translator.get("greetings.welcome"));
             System.out.println(translator.get("menu.play"));
@@ -17,7 +21,7 @@ public class MainMenu {
             System.out.println(translator.get("choice"));
             int choix = scanner.nextInt();
             if (choix == 1) {
-                new GameMenu().display();
+                new GameMenu(translator).display();
                 break;
             } else if (choix == 2) {
                 System.out.println(translator.get("greetings.bye"));
