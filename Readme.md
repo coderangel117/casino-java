@@ -52,8 +52,9 @@ If you delete the files, you will lose all the data.
 possible_games_list = ["Pendu alias hang_man", "Roulette", "bingo", "snake_game"]
 
 ## Next features
-
-- Permit to play in another languages (fr and en)
+- User manager
+- Improve UI/UX with Lanterna
+- Permit to play in another languages (fr, es, de ...)
 - Permit to add a new user in game menu
 - Compile a ranking of the best scores
 - Add different level (easy, normal, hard) (default => normal but can be changed)
